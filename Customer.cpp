@@ -19,13 +19,20 @@ Customer& Customer::operator=(const Customer& other) {
 
 Customer::Customer(Customer&& other) noexcept
     : name(std::move(other.name)), contactInfo(std::move(other.contactInfo)),
-      orderHistory(std::move(other.orderHistory)) {}
+      orderHistory(std::move(other.orderHistory)) {
+        other.name.clear();
+        other.contactInfo.clear();
+        other.orderHistory.clear();
+      }
 
 Customer& Customer::operator=(Customer&& other) noexcept {
     if (this != &other) {
         name = std::move(other.name);
         contactInfo = std::move(other.contactInfo);
         orderHistory = std::move(other.orderHistory);
+        other.name.clear();
+        other.contactInfo.clear();
+        other.orderHistory.clear();
     }
     return *this;
 }
