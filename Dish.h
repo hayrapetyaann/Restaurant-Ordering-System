@@ -19,6 +19,7 @@ public:
     double getPrice() const;
     std::string getName() const;
     virtual void display() const;
+    virtual ~Dish() = default;
 };
 
 #endif // DISH_H
