@@ -7,7 +7,7 @@ class Dessert : public Dish {
 private:
     bool containsNuts;
 public:
-    Dessert(std::string dishName, double dishPrice, bool nuts);
+    Dessert(std::string& dishName, double dishPrice, bool nuts);
     void display() const override;
 };
 
