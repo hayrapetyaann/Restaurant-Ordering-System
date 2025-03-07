@@ -16,7 +16,8 @@ Dish& Dish::operator=(const Dish& other) {
 
 Dish::Dish(Dish&& other) noexcept
     : name(std::move(other.name)), price(other.price) {
-      other.price = 0;
+        other.name.clear();
+        other.price = 0;
     }
 
 Dish& Dish::operator=(Dish&& other) noexcept {
@@ -24,6 +25,7 @@ Dish& Dish::operator=(Dish&& other) noexcept {
         name = std::move(other.name);
         price = other.price;
         other.price = 0;
+        other.name.clear();
     }
     return *this;
 }
