@@ -37,7 +37,7 @@ Customer& Customer::operator=(Customer&& other) noexcept {
     return *this;
 }
 
-void Customer::placeOrder(Order order) {
+void Customer::placeOrder(const Order& order) {
     orderHistory.push_back(order);
 }
 
