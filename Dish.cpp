@@ -1,6 +1,6 @@
 #include "Dish.h"
 
-Dish::Dish(std::string dishName, double dishPrice)
+Dish::Dish(std::string& dishName, double dishPrice)
     : name(dishName), price(dishPrice) {}
 
 Dish::Dish(const Dish& other)
