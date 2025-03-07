@@ -9,6 +9,7 @@ private:
     std::vector<Dish*> dishes;
 
 public:
+    Menu() = default;
     Menu(const Menu& other);
     Menu& operator=(const Menu& other);
     Menu(Menu&& other) noexcept;
