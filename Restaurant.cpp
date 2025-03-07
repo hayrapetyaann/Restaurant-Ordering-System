@@ -1,5 +1,7 @@
 #include "Restaurant.h"
-#include "Dish.h"
+#include "Appetizer.h"   
+#include "Entree.h"
+#include "Dessert.h"
 #include <iostream>
 
 Restaurant::Restaurant() {
@@ -38,7 +40,7 @@ void Restaurant::showMenu() const {
     menu.displayMenu();
 }
 
-Customer* Restaurant::getCustomerByName(const std::string& name) {
+Customer* Restaurant::getCustomerByName(const std::string& name) const {
     for (auto& customer : customers) {
         if (customer->getName() == name) {
             return customer;
