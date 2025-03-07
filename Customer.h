@@ -1,6 +1,8 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+class Order;
+
 #include <string>
 #include <vector>
 #include "Order.h"
