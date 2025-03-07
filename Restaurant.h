@@ -21,7 +21,7 @@ public:
     ~Restaurant();
 
     void showMenu() const;
-    Customer* getCustomerByName(const std::string& name);
+    Customer* getCustomerByName(const std::string& name) const;
     void placeNewOrder(const std::string& customerName);
     void viewCustomerOrderHistory(const std::string& customerName) const;
 };
