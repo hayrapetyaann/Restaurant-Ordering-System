@@ -10,7 +10,7 @@ protected:
     double price;
 
 public:
-    Dish(std::string& dishName, double dishPrice);
+    Dish(const std::string& dishName, double dishPrice);
     Dish(const Dish& other);
     Dish& operator=(const Dish& other);
     Dish(Dish&& other) noexcept;
