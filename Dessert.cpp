@@ -1,6 +1,6 @@
 #include "Dessert.h"
 
-Dessert::Dessert(std::string& dishName, double dishPrice, bool nuts)
+Dessert::Dessert(const std::string& dishName, double dishPrice, bool nuts)
     : Dish(dishName, dishPrice), containsNuts(nuts) {}
 
 void Dessert::display() const {
